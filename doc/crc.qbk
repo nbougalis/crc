@@ -423,6 +423,8 @@ of the bits-per-byte ratio (`CHAR_BIT`).
 
         typedef crc_optimal<32, 0x04C11DB7, 0xFFFFFFFF, 0xFFFFFFFF, true, true>
           crc_32_type;
+
+        typedef crc_optimal<32, 0x1EDC6F41, 0, 0, true, true> crc_intel_t;
     }
 
 Several sample CRC types are given, representing common CRC algorithms.  The
@@ -444,6 +446,7 @@ implementation, and not with determining "good" sets of CRC parameters.
      `crc_xmodem_t`.]]
     [[`crc_xmodem_t`]       [XMODEM, ZMODEM, ACORN]]
     [[`crc_32_type`]        [ADCCP, PKZip, libPNG, AUTODIN II, Ethernet, FDDI]]
+    [[`crc_intel_t`]]       [CRC-32C (Intel SSE 4.2 (STTNI))]
 ]
 
 [endsect]

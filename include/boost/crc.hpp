@@ -107,6 +107,8 @@ typedef crc_optimal<16, 0x1021, 0, 0, false, false>       crc_xmodem_t;
 //! Computation type for CRC-32|CRC-32/ADCCP|PKZIP standard
 typedef crc_optimal<32, 0x04C11DB7, 0xFFFFFFFF, 0xFFFFFFFF, true, true>
   crc_32_type;
+//! Computation type for CRC-32C, used by Intel in SSE 4.2 (SSTNI)
+typedef crc_optimal<32, 0x1EDC6F41, 0, 0, true, true> crc_intel_t;
 
 
 //  Forward declarations for implementation detail stuff  --------------------//
